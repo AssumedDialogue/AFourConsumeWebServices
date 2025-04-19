@@ -1,1 +1,8 @@
 <p>create-book works!</p>
+<div *ngIf="book">
+
+  <label>book title:</label> <br>
+  <input type="text" [(ngModel)]="book.title"  > <br>
+  <button (click)="createBook()">Add book</button>
+  <p>{{addMessage}}</p>
+</div>

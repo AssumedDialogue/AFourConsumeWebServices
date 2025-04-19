@@ -18,9 +18,14 @@ export class BookService {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
-  getBooktById(id:number): Observable<Book> {
+  getBookById(id:number): Observable<Book> {
     return this.http.get(`${baseUrl}/${id}`);
   }
+
+  updateBook(data: Book, id:number): Observable<any> {
+    return this.http.put(`${baseUrl}/${id}`,data);
+  }
+
 
 
 

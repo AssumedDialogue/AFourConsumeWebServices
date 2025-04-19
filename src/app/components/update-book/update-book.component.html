@@ -1,1 +1,8 @@
 <p>update-book works!</p>
+<div *ngIf="book">
+  <label>Student ID:</label> <br>
+  <input type="text" [(ngModel)]="book.id"  > <br>
+  <label>Student Name:</label> <br>
+  <input type="text" [(ngModel)]="book.title"  > <br>
+  <button (click)="updateBook()">Submit</button>
+</div>

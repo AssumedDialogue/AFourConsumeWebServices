@@ -22,7 +22,7 @@ export class DeleteBookComponent implements OnInit {
     this.getDeleteQuery();
   }
   getBook(id:number){
-    this.bookService.getBooktById(id)
+    this.bookService.getBookById(id)
       .subscribe({
         next:(data)=>{
           this.book = data;

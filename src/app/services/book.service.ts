@@ -26,6 +26,12 @@ export class BookService {
     return this.http.put(`${baseUrl}/${id}`,data);
   }
 
+  getAllBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(baseUrl);
+  }
+
+
+
 
 
 

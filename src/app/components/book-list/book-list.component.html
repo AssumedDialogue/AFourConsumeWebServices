@@ -1,1 +1,35 @@
-<p>book-list works!</p>
+<p>Book List</p>
+
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Update</th>
+    <th>Delete</th>
+    <th>Find Book</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of bookList">
+    <th scope="row">{{ book.id }}</th>
+    <td>{{ book.title }}</td>
+    <td>
+      <a [routerLink]="['/update-book', book.id,'edit']"
+         [queryParams]="{allowEdit: '1' }"
+         routerLinkActive="active" ariaCurrentWhenActive="page" aria-current="page">Update</a>
+    </td>
+    <td>
+      <a [routerLink]="['/delete-book', book.id,'delete']"
+         [queryParams]="{allowDelete: '1' }"
+         routerLinkActive="active" ariaCurrentWhenActive="page" aria-current="page">Delete</a>
+    </td>
+    <td>
+      <a [routerLink]="['/find-book', book.id]"
+         [queryParams]="{ allowFind: '1'}"
+         routerLinkActive="active" ariaCurrentWhenActive="page" aria-current="page">Find Book</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
